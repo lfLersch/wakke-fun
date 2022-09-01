@@ -27,4 +27,10 @@ class JsonHelper{
     final data = await json.decode(response);
     return Profile(data[0]['usuario_autor_nome'], data[0]['usuario_autor_apelido'], data[0]['usuario_autor_imagem_perfil']);
   }
+
+  static Future<String> getfotoPath() async {
+    final String response = await rootBundle.loadString('files/json_wakkefun.json');
+    final data = await json.decode(response);
+    return data[0]['usuario_autor_imagem_perfil'];
+  }
 }
