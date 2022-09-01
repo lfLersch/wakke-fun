@@ -60,7 +60,7 @@ class FeedItemContainer extends StatelessWidget {
                 SizedBox(
                   width: 20,
                 ),
-                ImageIcon(AssetImage('images/icon_coments.png'), color: Colors.red.shade700,),
+                ImageIcon(AssetImage('images/icon_star.png'), color: Colors.red.shade700,),
                 SizedBox(
                   width: 5,
                 ),

@@ -39,7 +39,7 @@ class _FeedScreenState extends State<FeedScreen> with AutomaticKeepAliveClientMi
                         itemCount: snapshot.data!.length,
                         itemBuilder: (context, i){
                           return FeedItemContainer(snapshot.data![i]);
-                        }) ;
+                        });
                   } else {
                     return Container();
                   }

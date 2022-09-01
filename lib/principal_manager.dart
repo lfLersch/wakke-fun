@@ -5,6 +5,7 @@ import 'package:wakke_fun/screens/game-screen.dart';
 import 'package:wakke_fun/screens/notification-screen.dart';
 import 'package:wakke_fun/screens/profile_screen.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class PrincipalManager extends StatefulWidget {
   static const String id = 'principal_manager';
@@ -113,7 +114,9 @@ class _PrincipalManagerState extends State<PrincipalManager> with SingleTickerPr
 
   FloatingActionButton buildFloatingActionButton() {
     return FloatingActionButton(
-      onPressed: () {},
+      onPressed: () {
+        showToast();
+      },
       backgroundColor: null,
       child: const Align(
           alignment: Alignment.center,
@@ -157,5 +160,17 @@ class _PrincipalManagerState extends State<PrincipalManager> with SingleTickerPr
             },
           )
         ]);
+  }
+
+  showToast(){
+    Fluttertoast.showToast(
+        msg: "lorem ipsum",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.black87,
+        textColor: Colors.white,
+        fontSize: 16.0
+    );
   }
 }
