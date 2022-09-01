@@ -193,7 +193,7 @@ class _PrincipalManagerState extends State<PrincipalManager>
       onPageChanged: (index) {
         _index.setValue(pageController.page!.round());
       },
-      children: const [
+      children: [
         FeedScreen(),
         GameScreen(),
         ProfileScreen(),
